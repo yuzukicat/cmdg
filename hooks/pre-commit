@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+
+[[ -x ~/bin/fmt-check ]] && (
+    echo "--- Precommit: gofmt ---"
+    ~/bin/fmt-check
+)
+
+echo "--- Precommit: lint ---"
+golint -set_exit_status ./...
+
+echo "--- Precommit: govet ---"
+go vet ./...
+
+echo "--- Precommit: unit tests ---"
+go test ./...
