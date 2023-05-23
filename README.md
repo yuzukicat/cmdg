@@ -2,7 +2,11 @@
 
 Copyright Thomas Habets <thomas@habets.se> 2015-2021
 
-https://github.com/yuzukicat/cmdg
+Source Code
+
+https://github.com/ThomasHabets/cmdg/
+
+For the purpose of packaging, use go 1.20
 
 ## License
 
